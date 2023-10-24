@@ -1,0 +1,20 @@
+import RPi.GPIO as GPIO
+import serial
+
+ser = serial.Serial('/dev/serial0',115200)
+ser.close()
+ser.open()
+
+str = b'Python Serial Example\r\n'
+n = ser.write(str)
+
+try:
+    while True:
+        if ser.readable():
+            response = ser.readline()
+            ser.write(response)
+            print(response)
+except KeyboardInterrupt:
+    pass
+finally:
+    ser.close()
