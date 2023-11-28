@@ -1,6 +1,7 @@
+아래 사진은 omgomg2 결과인데, epochs 를 10으로 해서인지... data가 구려서인지 망해버림
 
 #학습 코드
-#python yolov5-master/train.py --img 224 --batch 16 --epochs 50 --data custom_data.yaml --weights yolov5s.pt --name omgomg --cache
+#python yolov5-master/train.py --img 224 --batch 16 --epochs 10 --data custom_data.yaml --weights yolov5s.pt --name omgomg --cache
 
 #detect 코드
 #python yolov5-master/detect.py --weights yolov5-master\runs\train\omg2\weights/best.pt --img 224 --conf 0.25 --source 0 
